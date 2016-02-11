@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/simplabs/ember-cli-pixijs.svg?branch=master)](https://travis-ci.org/simplabs/ember-cli-pixijs)
+
 # Ember-cli-pixijs
 
 This README outlines the details of collaborating on this Ember addon.
