@@ -5,15 +5,22 @@ var path = require('path');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    // Add options here
-  });
+    jscsOptions: {
+      enabled: true,
+      testGenerator: function(relativePath, errors) {
+        if (errors) {
+          errors = "\\n" + this.escapeErrorString(errors);
+        } else {
+          errors = "";
+        }
 
-  /*
-    This build file specifies the options for the dummy test app of this
-    addon, located in `/tests/dummy`
-    This build file does *not* influence how the addon or the app using it
-    behave. You most likely want to be modifying `./index.js` or app's build file
-  */
+        return "describe('JSCS - " + relativePath + "', function() {\n" +
+          "it('should pass jscs', function() { \n" +
+          "  expect(" + !errors + ", '" + relativePath + " should pass jscs." + errors + "').to.be.ok; \n" +
+          "})});\n";
+      }
+    }
+  });
 
   return app.toTree();
 };
