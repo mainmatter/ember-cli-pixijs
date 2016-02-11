@@ -3,7 +3,11 @@
 # ember-cli-pixijs
 
 ember-cli-pixijs wraps the [pixi.js](https://github.com/pixijs/pixi.js) HTML5
-2D rendering engine so that it can easily be used in Ember.js applications.
+2D rendering engine so that it can easily be used in Ember.js applications:
+
+```js
+import PIXI from 'pixi';
+```
 
 It also defines a `PixiCanvas` component that can be used to display canvases
 rendered with pixi.js in Ember.js applications. The component handles creating
@@ -15,7 +19,7 @@ A concrete subclass of the `PixiCanvas` component might look sth. like this:
 
 ```js
 // app/components/my-pixi-component.js
-/* global PIXI */
+import PIXI from 'pixi';
 import PixiCanvas from 'ember-cli-pixijs/components/pixi-canvas';
 
 export default PixiCanvas.extend({

@@ -1,4 +1,5 @@
-/* global PIXI, requestAnimationFrame */
+/* global requestAnimationFrame */
+import PIXI from 'pixi';
 import PixiCanvas from 'ember-cli-pixijs/components/pixi-canvas';
 
 const { cos, sin } = Math;

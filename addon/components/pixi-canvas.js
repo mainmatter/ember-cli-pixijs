@@ -1,5 +1,5 @@
-/* global PIXI */
 import Ember from 'ember';
+import PIXI from 'pixi';
 
 const { Component, computed, K } = Ember;
 
