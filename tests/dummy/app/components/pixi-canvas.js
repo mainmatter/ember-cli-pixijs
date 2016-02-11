@@ -4,7 +4,7 @@ import PixiCanvas from 'ember-cli-pixijs/components/pixi-canvas';
 const { cos, sin } = Math;
 
 export default PixiCanvas.extend({
-  renderPixi() {
+  draw() {
     const renderer = this.get('pixiRenderer');
     const stage = new PIXI.Container();
     stage.interactive = true;

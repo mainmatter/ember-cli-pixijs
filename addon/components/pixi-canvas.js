@@ -30,8 +30,8 @@ export default Component.extend({
     this.set('_currentCanvas', currentCanvas);
     this.$().append(currentCanvas);
 
-    this.renderPixi();
+    this.draw();
   },
 
-  renderPixi: K
+  draw: K
 });
