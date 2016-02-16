@@ -64,3 +64,5 @@ released under the
 
 ember-cli-pixijs is not an official part of [Ember.js](http://emberjs.com) and
 is not maintained by the Ember.js Core Team.
+
+pixi.js is developed by and &copy; Mathew Groves.
