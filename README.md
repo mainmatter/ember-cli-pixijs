@@ -43,6 +43,8 @@ export default PixiCanvas.extend({
     graphics.endFill();
 
     stage.addChild(graphics);
+    
+    renderer.render(stage);
   }
 });
 ```
