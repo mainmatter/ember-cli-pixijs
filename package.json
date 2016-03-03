@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-pixijs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Ember CLI Addon that wraps pixi.js",
   "directories": {
     "doc": "doc",
