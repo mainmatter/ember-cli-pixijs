@@ -5,27 +5,27 @@ const { Component, computed, K } = Ember;
 
 export default Component.extend({
   didReceiveAttrs() {
-    const width = this.getAttr('width');
-    const height = this.getAttr('height');
+    let width = this.getAttr('width');
+    let height = this.getAttr('height');
 
     this.setProperties({ width, height });
   },
 
   pixiRenderer: computed('width', 'height', function() {
-    const { width, height } = this.getProperties('width', 'height');
+    let { width, height } = this.getProperties('width', 'height');
 
     return new PIXI.autoDetectRenderer(width, height);
   }),
 
   willUpdate() {
-    const currentCanvas = this.get('_currentCanvas');
+    let currentCanvas = this.get('_currentCanvas');
 
     this.$().children(currentCanvas).remove();
   },
 
   didRender() {
-    const renderer = this.get('pixiRenderer');
-    const currentCanvas = renderer.view;
+    let renderer = this.get('pixiRenderer');
+    let currentCanvas = renderer.view;
 
     this.set('_currentCanvas', currentCanvas);
     this.$().append(currentCanvas);
