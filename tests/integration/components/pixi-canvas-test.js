@@ -1,9 +1,12 @@
 /* jshint expr:true */
 import { expect } from 'chai';
-import { describeComponent, it } from 'ember-mocha';
+import { describe, it } from 'mocha';
+import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describeComponent('pixi-canvas', 'Integration: PixiCanvasComponent', { integration: true }, () => {
+describe('Integration: PixiCanvasComponent', () => {
+  setupComponentTest('pixi-canvas', { integration: true });
+
   it('renders a canvas element', function() {
     this.render(hbs`
       {{pixi-canvas}}
