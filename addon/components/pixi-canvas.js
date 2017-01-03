@@ -1,7 +1,10 @@
 import Ember from 'ember';
 import PIXI from 'pixi';
 
-const { Component, computed, K } = Ember;
+const {
+  Component,
+  computed
+} = Ember;
 
 export default Component.extend({
   didReceiveAttrs() {
@@ -33,5 +36,5 @@ export default Component.extend({
     this.draw();
   },
 
-  draw: K
+  draw() {}
 });
