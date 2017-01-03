@@ -1,15 +1,18 @@
 /* jshint expr:true */
 import { expect } from 'chai';
-import { describeComponent, it } from 'ember-mocha';
+import { describe, it } from 'mocha';
+import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describeComponent('pixi-canvas', 'Integration: PixiCanvasComponent', { integration: true }, () => {
+describe('Integration: PixiCanvasComponent', () => {
+  setupComponentTest('pixi-canvas', { integration: true });
+
   it('renders a canvas element', function() {
     this.render(hbs`
       {{pixi-canvas}}
     `);
 
-    const $canvas = this.$('canvas');
+    let $canvas = this.$('canvas');
 
     expect($canvas).to.be.ok;
   });
@@ -19,9 +22,9 @@ describeComponent('pixi-canvas', 'Integration: PixiCanvasComponent', { integrati
       {{pixi-canvas width=200 height=100}}
     `);
 
-    const $canvas = this.$('canvas');
-    const width = Number($canvas.attr('width'));
-    const height = Number($canvas.attr('height'));
+    let $canvas = this.$('canvas');
+    let width = Number($canvas.attr('width'));
+    let height = Number($canvas.attr('height'));
 
     expect(width).to.eq(200);
     expect(height).to.eq(100);
@@ -34,14 +37,14 @@ describeComponent('pixi-canvas', 'Integration: PixiCanvasComponent', { integrati
       {{pixi-canvas width=width height=height}}
     `);
 
-    const $oldCanvas = this.$('canvas');
+    let $oldCanvas = this.$('canvas');
 
     this.set('width', 100);
     this.set('height', 50);
 
-    const $newCanvas = this.$('canvas');
-    const width = Number($newCanvas.attr('width'));
-    const height = Number($newCanvas.attr('height'));
+    let $newCanvas = this.$('canvas');
+    let width = Number($newCanvas.attr('width'));
+    let height = Number($newCanvas.attr('height'));
 
     expect($oldCanvas).to.not.eql($newCanvas);
     expect(width).to.eq(100);

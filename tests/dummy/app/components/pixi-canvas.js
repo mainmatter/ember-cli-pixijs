@@ -6,11 +6,11 @@ const { cos, sin } = Math;
 
 export default PixiCanvas.extend({
   draw() {
-    const renderer = this.get('pixiRenderer');
-    const stage = new PIXI.Container();
+    let renderer = this.get('pixiRenderer');
+    let stage = new PIXI.Container();
     stage.interactive = true;
 
-    const graphics = new PIXI.Graphics();
+    let graphics = new PIXI.Graphics();
 
     // set a fill and line style
     graphics.beginFill(0xFF3300);
@@ -56,7 +56,7 @@ export default PixiCanvas.extend({
     stage.addChild(graphics);
 
     // let's create a moving shape
-    const thing = new PIXI.Graphics();
+    let thing = new PIXI.Graphics();
     stage.addChild(thing);
     thing.position.x = 620 / 2;
     thing.position.y = 380 / 2;
