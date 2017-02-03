@@ -7,18 +7,18 @@ const {
 } = Ember;
 
 export default Component.extend({
+  pixiRenderer: computed('width', 'height', function() {
+    let { width, height } = this.getProperties('width', 'height');
+
+    return PIXI.autoDetectRenderer(width, height);
+  }),
+
   didReceiveAttrs() {
     let width = this.getAttr('width');
     let height = this.getAttr('height');
 
     this.setProperties({ width, height });
   },
-
-  pixiRenderer: computed('width', 'height', function() {
-    let { width, height } = this.getProperties('width', 'height');
-
-    return PIXI.autoDetectRenderer(width, height);
-  }),
 
   willUpdate() {
     let currentCanvas = this.get('_currentCanvas');
