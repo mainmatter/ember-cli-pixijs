@@ -37,6 +37,15 @@ script:
   #  to the addon's original dependency state, skipping "cleanup".
   - ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
 
+deploy:
+  provider: npm
+  email: info@simplabs.com
+  api_key:
+    secure: pw7jVmECVUo44BZtLq+AKeugpB2Xq1U4AE4BpXjKYt8dk2gKm4kC66FXzNJ4BxueadQFpLZZOES+511nfbfKVPpNEXfyx6Won+LWRHgNFhPuYuiKAVWHP0HjBqRmSHZ5pj5yjs7Gx90Nmuux0kRS7dwh/kOPQmDhWyWgjIqxewCTU6ALlf/KjqaMwAXnVU5PBPo441M0Von/DUqXoGWwzD0ASzQ1gYWjcTQrFUYhvHq3XcHLxJQlyR2Wx5gEuIUs73evvfMuCvR8YKT5I6XrynhtGGBCTFOL52lnSPhyJa8jnFwY5f0F2u7epxu2F4xt/eQeH+Vg2WNvUbtEqRlIytTkAw6OQkxD/RJYlCNg4KhwYhQvbamYFFpDAnuBKqoT1QkcDPnP0KsM9HxgDF+arOvOeqhSpNNfW3j4gMTNE2yQPKpiXu4l8zvtPoSX2flItdYzGydsngMqCFhIftByA15tZoFV373JD6ZmgNE/1skD2jSySopvyNjtrdzWd411eyvg/lzR8kE2aEqjMGwGwANmbFEICPYrN5Vg56ZXCS1tZeyZ/TsEAfbiomrRdK4saFJo58PImEczmEfP+ZiSrFXoN3vb56V/gFhdtyBPS+W9TA1h+/m6y4fQqVrA8pbDKcFRnkcR1YEmF3CbZu0TiWCgK9EhAR/yu6csLF3gteQ=
+  on:
+    tags: true
+    repo: simplabs/ember-cli-pixijs
+
 notifications:
   email: false
   slack:
