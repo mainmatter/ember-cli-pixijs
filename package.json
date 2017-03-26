@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-pixijs",
   "version": "0.0.2",
-  "description": "An Ember CLI Addon that wraps pixi.js",
+  "description": "An Ember CLI Addon that wraps pixi.js.",
   "keywords": [
     "ember-addon"
   ],
@@ -14,44 +14,42 @@
   "repository": "https://github.com/simplabs/ember-cli-pixijs",
   "scripts": {
     "build": "ember build",
-    "lint": "eslint app addon blueprints config server test-support tests *.js",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "lint": "eslint app addon blueprints config server test-support tests *.js"
   },
   "dependencies": {
-    "broccoli-funnel": "^1.0.0",
-    "broccoli-merge-trees": "^1.0.0",
-    "ember-cli-babel": "^5.1.7",
-    "es5-shim": "~4.5.2",
-    "pixi.js": "~3.0.9"
+    "ember-cli-babel": "^6.3.0",
+    "es5-shim": "^4.5.2",
+    "pixi.js": "^3.0.9 || ^4.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "2.10.0",
-    "ember-cli-app-version": "^2.0.0",
-    "ember-cli-chai": "^0.3.2",
-    "ember-cli-dependency-checker": "^2.0.0",
-    "ember-cli-eslint": "3.0.2",
-    "ember-cli-htmlbars": "^2.0.0",
-    "ember-cli-htmlbars-inline-precompile": "^0.3.3",
-    "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mocha": "^0.14.0",
-    "ember-cli-release": "^0.2.9",
-    "ember-cli-sri": "^2.1.0",
+    "ember-cli": "2.13.3",
+    "ember-cli-chai": "^0.4.2",
+    "ember-cli-dependency-checker": "^2.0.1",
+    "ember-cli-eslint": "^4.1.0",
+    "ember-cli-htmlbars": "^2.0.2",
+    "ember-cli-htmlbars-inline-precompile": "^0.4.3",
+    "ember-cli-inject-live-reload": "^1.6.1",
+    "ember-cli-mocha": "^0.14.4",
+    "ember-cli-shims": "^1.1.0",
+    "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "^2.10.0",
-    "ember-disable-prototype-extensions": "^1.1.0",
-    "ember-export-application-global": "^1.0.5",
-    "ember-load-initializers": "^0.6.3",
-    "ember-resolver": "^4.1.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
+    "ember-export-application-global": "^2.0.0",
+    "ember-load-initializers": "^1.0.0",
+    "ember-resolver": "^4.2.1",
+    "ember-source": "~2.13.3",
     "eslint-config-simplabs": "0.4.0",
-    "eslint-plugin-ember": "^3.2.0",
-    "eslint-plugin-mocha": "^4.8.0",
-    "loader.js": "^4.0.10"
+    "eslint-plugin-ember": "^3.5.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "ember-source": "~2.14.0",
+    "loader.js": "^4.5.1"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": "^4.5 || 6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
