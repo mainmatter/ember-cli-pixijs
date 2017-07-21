@@ -7,8 +7,6 @@ sudo: false
 
 cache:
   yarn: true
-  directories:
-    - $HOME/.cache # includes bowers cache
 
 env:
   - EMBER_TRY_SCENARIO=ember-1.13
@@ -17,6 +15,7 @@ env:
   - EMBER_TRY_SCENARIO=ember-release
   - EMBER_TRY_SCENARIO=ember-beta
   - EMBER_TRY_SCENARIO=ember-canary
+  - EMBER_TRY_SCENARIO=ember-default
 
 matrix:
   fast_finish: true
@@ -26,11 +25,10 @@ matrix:
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
-  - yarn global add phantomjs-prebuilt bower
+  - yarn global add phantomjs-prebuilt
 
 install:
   - yarn install --no-lockfile --non-interactive
-  - bower install
 
 script:
   # Usually, it's ok to finish the test scenario without reverting

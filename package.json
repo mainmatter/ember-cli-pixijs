@@ -28,8 +28,7 @@
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "2.10.0",
-    "ember-cli-app-version": "^2.0.0",
+    "ember-cli": "^2.14.0",
     "ember-cli-chai": "^0.4.1",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.0",
@@ -37,20 +36,18 @@
     "ember-cli-htmlbars-inline-precompile": "^0.4.3",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mocha": "^0.14.0",
-    "ember-cli-release": "^0.2.9",
-    "ember-cli-sri": "^2.1.0",
-    "ember-cli-uglify": "^1.2.0",
+    "ember-cli-shims": "^1.1.0",
     "ember-disable-prototype-extensions": "^1.1.0",
-    "ember-export-application-global": "^1.0.5",
-    "ember-load-initializers": "^0.6.3",
+    "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.1.0",
+    "ember-source": "^2.14.1",
     "eslint-config-simplabs": "0.4.0",
     "eslint-plugin-ember": "^4.0.0",
     "eslint-plugin-mocha": "^4.8.0",
     "loader.js": "^4.0.10"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": "^4.5 || 6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
