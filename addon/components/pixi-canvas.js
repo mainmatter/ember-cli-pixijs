@@ -5,11 +5,18 @@ import PIXI from 'pixi';
 export default Component.extend({
   draw() {},
 
-  pixiRenderer: computed('width', 'height', function() {
+  pixiRenderer: computed(function() {
     let { width, height } = this.getProperties('width', 'height');
 
     return PIXI.autoDetectRenderer(width, height);
   }),
+
+  resizePixiRenderer: Ember.observer('width', 'height', function() {
+    let width = this.getAttr('width');
+    let height = this.getAttr('height');
+
+    this.get('pixiRenderer').resize(width, height);
+  },
 
   didReceiveAttrs() {
     let width = this.getAttr('width');
