@@ -18,6 +18,16 @@ export default Component.extend({
     this.setProperties({ width, height });
   },
 
+  willDestroyElement() {
+    this.get('pixiRenderer').destroy();
+  }
+
+  willUpdate() {
+    let currentCanvas = this.get('_currentCanvas');
+
+    this.$().children(currentCanvas).remove();
+  },
+
   didRender() {
     let renderer = this.get('pixiRenderer');
     let currentCanvas = renderer.view;
@@ -26,11 +36,5 @@ export default Component.extend({
     this.$().append(currentCanvas);
 
     this.draw();
-  },
-
-  willUpdate() {
-    let currentCanvas = this.get('_currentCanvas');
-
-    this.$().children(currentCanvas).remove();
   }
 });
