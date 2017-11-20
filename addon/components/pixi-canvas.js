@@ -35,10 +35,6 @@ export default Component.extend({
     this.setProperties({ width, height });
   },
 
-  willDestroyElement() {
-    this.get('pixiRenderer').destroy();
-  },
-
   willUpdate() {
     let currentCanvas = this.get('_currentCanvas');
 
@@ -53,6 +49,10 @@ export default Component.extend({
     this.$().append(currentCanvas);
 
     this.draw();
+  },
+
+  willDestroyElement() {
+    this.get('pixiRenderer').destroy();
   },
 
   draw() {},
