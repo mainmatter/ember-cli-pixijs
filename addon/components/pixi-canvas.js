@@ -5,7 +5,7 @@ import PIXI from 'pixi';
 export default Component.extend({
   draw() {},
 
-  height: computed('height', {
+  height: computed({
     get() { return 600; },
     set(key, value) {
       this.resizePixiRenderer(this.get('width'), value);
@@ -13,7 +13,7 @@ export default Component.extend({
     }
   }),
 
-  width: computed('width', {
+  width: computed({
     get() { return 800; },
     set(key, value) {
       this.resizePixiRenderer(value, this.get('height'));
