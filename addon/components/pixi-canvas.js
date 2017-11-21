@@ -7,6 +7,8 @@ const {
 } = Ember;
 
 export default Component.extend({
+  draw() {},
+
   pixiRenderer: computed('width', 'height', function() {
     let { width, height } = this.getProperties('width', 'height');
 
@@ -20,12 +22,6 @@ export default Component.extend({
     this.setProperties({ width, height });
   },
 
-  willUpdate() {
-    let currentCanvas = this.get('_currentCanvas');
-
-    this.$().children(currentCanvas).remove();
-  },
-
   didRender() {
     let renderer = this.get('pixiRenderer');
     let currentCanvas = renderer.view;
@@ -36,5 +32,9 @@ export default Component.extend({
     this.draw();
   },
 
-  draw() {}
+  willUpdate() {
+    let currentCanvas = this.get('_currentCanvas');
+
+    this.$().children(currentCanvas).remove();
+  }
 });
