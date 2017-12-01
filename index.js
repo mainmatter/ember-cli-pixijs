@@ -33,7 +33,7 @@ module.exports = {
       trees.push(vendorTree);
     }
 
-    let pixiPath = path.join(path.dirname(require.resolve('pixi.js')), '..', 'bin');
+    let pixiPath = path.join(path.dirname(require.resolve('pixi.js')), '..', 'dist');
     trees.push(new Funnel(pixiPath, {
       destDir: 'pixi.js',
       include: [new RegExp(/\.(js|map)$/)]
