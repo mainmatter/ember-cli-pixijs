@@ -1,3 +1,4 @@
+/* eslint-env node */
 'use strict';
 
 const getChannelURL = require('ember-source-channel-url');
@@ -9,6 +10,7 @@ module.exports = function() {
     getChannelURL('canary')
   ]).then((urls) => {
     return {
+      useYarn: true,
       scenarios: [
         {
           name: 'ember-1.13',

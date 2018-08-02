@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import { setupRenderingTest } from 'ember-mocha';
-import { render, pauseTest } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 describe('Integration: PixiCanvasComponent', function() {
@@ -11,9 +11,6 @@ describe('Integration: PixiCanvasComponent', function() {
     await render(hbs`
       {{pixi-canvas}}
     `);
-
-    // debugger
-    // await pauseTest();
 
     let canvas = this.element.querySelector('canvas');
 
