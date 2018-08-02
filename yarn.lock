@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@ember/test-helpers@^0.7.16":
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-0.7.20.tgz#488b1c8ef23626f8831e5cb750ffca86e017e6dc"
+"@ember/test-helpers@^0.7.18":
+  version "0.7.25"
+  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-0.7.25.tgz#b4014c108b40ffaf74f3c4d5918800917541541d"
   dependencies:
     broccoli-funnel "^2.0.1"
-    ember-cli-babel "^6.10.0"
+    ember-cli-babel "^6.12.0"
     ember-cli-htmlbars-inline-precompile "^1.0.0"
 
 "@glimmer/di@^0.2.0":
@@ -2246,7 +2246,7 @@ ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.3.0:
     clone "^2.0.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-cli-babel@^6.1.0:
+ember-cli-babel@^6.1.0, ember-cli-babel@^6.12.0:
   version "6.16.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.16.0.tgz#623b4a2764ece72b65f1572fc8aeb5714a450228"
   dependencies:
@@ -2264,7 +2264,7 @@ ember-cli-babel@^6.1.0:
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^6.10.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1:
+ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1:
   version "6.12.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.12.0.tgz#3adcdbe1278da1fcd0b9038f1360cb4ac5d4414c"
   dependencies:
@@ -2380,12 +2380,6 @@ ember-cli-lodash-subset@^1.0.7:
 ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
-
-ember-cli-mocha@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mocha/-/ember-cli-mocha-0.15.0.tgz#483b25a2c631b2b1913344686f497a81ced669b6"
-  dependencies:
-    ember-mocha "^0.13.0"
 
 ember-cli-normalize-entity-name@^1.0.0:
   version "1.0.0"
@@ -2564,11 +2558,11 @@ ember-load-initializers@^1.1.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-mocha@^0.13.0:
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/ember-mocha/-/ember-mocha-0.13.1.tgz#6c42d76fc7e5579a1ca8499621317b6cde7b4381"
+ember-mocha@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/ember-mocha/-/ember-mocha-0.14.0.tgz#5c14cc1fa7545fe262461856c4ffaf9a662db721"
   dependencies:
-    "@ember/test-helpers" "^0.7.16"
+    "@ember/test-helpers" "^0.7.18"
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
     common-tags "^1.5.1"
