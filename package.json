@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint": "eslint app addon blueprints config server test-support tests *.js",
+    "lint:js": "eslint app addon blueprints config server test-support tests *.js",
     "start": "ember server",
     "test": "ember test",
     "test:all": "ember try:each"
