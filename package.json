@@ -27,7 +27,7 @@
     "pixi.js": "^4.4"
   },
   "devDependencies": {
-    "broccoli-asset-rev": "^2.7.0",
+    "broccoli-asset-rev": "^3.0.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
     "ember-cli-chai": "^0.4.0",
