@@ -24,7 +24,7 @@
     "broccoli-merge-trees": "^1.0.0 || ^2.0.0 || ^3.0.0",
     "ember-cli-babel": "^6.8.2",
     "es5-shim": "~4.5.2",
-    "pixi.js": "^4.4"
+    "pixi.js": "^4.8.4"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^3.0.0",
