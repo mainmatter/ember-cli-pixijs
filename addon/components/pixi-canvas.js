@@ -37,11 +37,9 @@ export default Component.extend({
 
   didRender() {
     let renderer = this.get('pixiRenderer');
-    let currentCanvas = renderer.view;
+    let canvas = renderer.view;
 
-    this.set('_currentCanvas', currentCanvas);
-    this.$().append(currentCanvas);
-
+    this.element.appendChild(canvas);
     this.draw();
   },
 
