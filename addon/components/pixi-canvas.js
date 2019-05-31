@@ -6,7 +6,7 @@ export default Component.extend({
   draw() {},
 
   height: computed('height', {
-    get() { return 600; },
+    get() { },
     set(key, value) {
       this._resizePixiRenderer(this.get('width'), value);
       return value;
@@ -14,7 +14,7 @@ export default Component.extend({
   }),
 
   width: computed('width', {
-    get() { return 800; },
+    get() { },
     set(key, value) {
       this._resizePixiRenderer(value, this.get('height'));
       return value;
