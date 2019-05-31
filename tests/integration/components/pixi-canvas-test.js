@@ -31,7 +31,7 @@ describe('Integration: PixiCanvasComponent', function() {
     expect(height).to.eq(100);
   });
 
-  it('replaces the canvas element when the dimensions change', async function() {
+  it('resizes the canvas element when the dimensions change', async function() {
     this.set('width', 200);
     this.set('height', 100);
     await render(hbs`
@@ -40,14 +40,16 @@ describe('Integration: PixiCanvasComponent', function() {
 
     let oldCanvas = this.element.querySelector('canvas');
 
-    this.set('width', 100);
-    this.set('height', 50);
+    this.setProperties({
+      width: 100,
+      height: 50
+    });
 
     let newCanvas = this.element.querySelector('canvas');
     let width = Number(newCanvas.width);
     let height = Number(newCanvas.height);
 
-    expect(oldCanvas).to.not.eql(newCanvas);
+    expect(oldCanvas).to.eql(newCanvas);
     expect(width).to.eq(100);
     expect(height).to.eq(50);
   });
