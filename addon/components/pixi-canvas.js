@@ -5,11 +5,28 @@ import PIXI from 'pixi';
 export default Component.extend({
   draw() {},
 
-  pixiRenderer: computed('width', 'height', function() {
+  height: computed('height', {
+    get() { return 600; },
+    set(key, value) {
+      this._resizePixiRenderer(this.get('width'), value);
+      return value;
+    }
+  }),
+
+  width: computed('width', {
+    get() { return 800; },
+    set(key, value) {
+      this._resizePixiRenderer(value, this.get('height'));
+      return value;
+    }
+  }),
+
+  pixiRenderer: computed(function() {
     let { width, height } = this.getProperties('width', 'height');
 
     return PIXI.autoDetectRenderer(width, height);
   }),
+
 
   didReceiveAttrs() {
     let width = this.getAttr('width');
@@ -28,9 +45,11 @@ export default Component.extend({
     this.draw();
   },
 
-  willUpdate() {
-    let currentCanvas = this.get('_currentCanvas');
+  willDestroyElement() {
+    this.get('pixiRenderer').destroy();
+  },
 
-    this.$().children(currentCanvas).remove();
+  _resizePixiRenderer(width, height) {
+    this.get('pixiRenderer').resize(width, height);
   }
 });
